@@ -98,7 +98,6 @@
                         <span>x = independently organized TED event</span>
                         <h2>Theme: <br /> Future Forward </h2>
                         <a href="https://tedxaul.netlify.app" class="primary-btn"><i class="fa fa-ticket"></i> Register</a>
-                        <a href="#" class="primary-btn_w top-btn"><i class="fa fa-youtube-play"></i> LiveStream</a>
                     </div>
                 </div>
                 <div class="col-lg-5">
@@ -182,17 +181,10 @@
         <div class="container">
             <div class="newslatter-inner set-bg" data-setbg="img/newslatter-bg.jpg">
                 <div class="ni-text">
-                    <h3>Subscribe Newsletter</h3>
-                    <p>Subscribe to our newsletter and don’t miss anything</p>
+                    <h3>WATCH THE LiveStream Here</h3>
+                    <p>Not Able to come in person. We Got You Covered.</p>
                 </div>
-                <form action="https://formsubmit.co/kingzykesh634@gmail.com" method="POST" class="ni-form">
-                    <input type="hidden" name="_next" value="https://tedxanchoruniversity.netlify.app">
-                    <input type="hidden" name="_subject" value="Newsletter From TEDx!">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="email" name="email" placeholder="Your email">
-
-                    <button type="submit">Subscribe</button>
-                </form>
+                <a href="#" class="primary-btn_wa ni-form"><i class="fa fa-youtube-play"></i> LiveStream</a>
             </div>
         </div>
     </section>
@@ -235,6 +227,25 @@
                 </div>
             </div>
         </div>
+    </section><br><br><br><br>
+
+    <section class="newslatter-section">
+        <div class="container">
+            <div class="newslatter-inner set-bg" data-setbg="img/newslatter-bg.jpg">
+                <div class="ni-text">
+                    <h3>Subscribe Newsletter</h3>
+                    <p>Subscribe to our newsletter and don’t miss anything</p>
+                </div>
+                <form action="https://formsubmit.co/kingzykesh634@gmail.com" method="POST" class="ni-form">
+                    <input type="hidden" name="_next" value="https://tedxanchoruniversity.netlify.app">
+                    <input type="hidden" name="_subject" value="Newsletter From TEDx!">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="email" name="email" placeholder="Your email">
+
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
     </section>
 
             <div class="row">
@@ -266,7 +277,7 @@
     <!-- Js Plugins -->
     <script>document.addEventListener("DOMContentLoaded", function() {
         // Get the "Buy Ticket" button
-        var buyTicketBtn = document.querySelector(".primary-btn_w");
+        var buyTicketBtn = document.querySelector(".primary-btn_wa");
         
         // Get the video player and close button elements
         var videoPlayer = document.getElementById("video-player");
@@ -278,7 +289,7 @@
             // Display the video player
             videoPlayer.style.display = "flex";
             // Set the YouTube video URL
-            var youtubeURL = "https://www.youtube.com/embed/blUPLZw_XyU?si=N2aXYLF1rPGE7WY-";
+            var youtubeURL = "";
             // Set the source of the iframe to the YouTube video URL
             document.getElementById("youtube-video").src = youtubeURL;
         });
