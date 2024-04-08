@@ -244,6 +244,7 @@
                     </div>
                 </div>
                 
+               
                 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
@@ -254,14 +255,13 @@
                             </div>
                             <div class="modal-body pt-md-0 pb-5 px-4 px-md-5 text-center">
                                 <h2><b>Okorie Daberechi</b></h2>
-                                <div class="phone-number">
-                                    <h2>2266195188</h2>
-                                    <button onclick="copyPhoneNumber()" class="copy-btn">&#x1F4CB; Copy</button>
-                                </div>
+                                <h2>2266195188</h2> <button onclick="copyPhoneNumber()" class="copy-btn">&#x1F4CB; Copy</button>
+                                <div class="phone-number">2266195188</div>
                                 <div class="icon d-flex align-items-center justify-content-center">
                                     <img src="img/unnamed-removebg-preview.png" alt="" class="img-fluid">
                                 </div>
                                 <h4><b>Zenith Bank</b></h4>
+                                
                                 <button onclick="openWhatsApp()" class="btn btn-primary">PAYMENT COMPLETED</button>
                             </div>
                         </div>
@@ -270,16 +270,14 @@
                 
                 <script>
                     function copyPhoneNumber() {
-                        var phoneNumber = document.querySelector('.phone-number h2').innerText;
-                
-                        var tempInput = document.createElement("input");
-                        tempInput.value = phoneNumber;
-                        document.body.appendChild(tempInput);
-                        tempInput.select();
-                        document.execCommand("copy");
-                        document.body.removeChild(tempInput);
-                
-                        alert("Phone number copied: " + phoneNumber);
+                        var phoneNumber = document.querySelector('.phone-number').innerText.trim();
+                        navigator.clipboard.writeText(phoneNumber)
+                            .then(function() {
+                                alert("Phone number copied: " + phoneNumber);
+                            })
+                            .catch(function(error) {
+                                console.error("Failed to copy: ", error);
+                            });
                     }
                 
                     function openWhatsApp() {
@@ -296,7 +294,6 @@
                         window.open(whatsappURL);
                     }
                 </script>
-                
                 
                 
                 
